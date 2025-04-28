@@ -39,7 +39,7 @@ This project builds a machine learning system to classify SMS messages as **Spam
 
 ## Project Workflow
 
-1. **Load The Data**  
+1. **Loaded Data**  
    Uploaded the SMS dataset into Colab for processing.
 
 2. **Data Preprocessing**  
