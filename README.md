@@ -74,6 +74,13 @@ It trains a Logistic Regression model on preprocessed text and deploys it using 
 
 Logistic Regression was selected due to its strong performance, simplicity, and real-time prediction speed.
 
+## Streamlit Interface:
+![Streamlit interface](https://github.com/user-attachments/assets/5ebfdd7b-b18f-43f3-9eb8-1219c69921f4)
+
+![Safe message output](https://github.com/user-attachments/assets/05c1d54c-a6d2-4ef6-81fa-45e5c3cab6ba)
+
+![Spam message output](https://github.com/user-attachments/assets/8f9f7838-d4b7-4ba2-8259-929cab54b9fb)
+
 ---
 
 ## How to Run
