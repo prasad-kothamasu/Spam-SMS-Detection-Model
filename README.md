@@ -89,17 +89,17 @@ Use the `cd` command to change to your project directory. Example:
 ```bash
 cd "C:\Users\YourName\Desktop\spam_sms_project" 
 
-### 3.Create Virtual Environment
+3.Create Virtual Environment
 python -m venv spamSmsDetector
 
-### 4. Activate Virtual Environment
+4. Activate Virtual Environment
 spamSmsDetector\Scripts\activate
 
-### 5. Install All Required Packages
+5. Install All Required Packages
 pip install -r requirements.txt
 Note : Run it only for the first time of execution
 
-### 6.Run the streamlit App
+6.Run the streamlit App
 streamlit run app.py
 
 Your app will open in the browser at http://localhost:8501
