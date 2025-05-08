@@ -82,41 +82,39 @@ Logistic Regression was selected due to its strong performance, simplicity, and 
 
 You can do this by pressing `Win + R`, typing `cmd`, and hitting Enter.
 
----
 
 ### 2. Navigate to Your Project Folder
 Use the `cd` command to change to your project directory. Example:
-```bash
+
 cd "C:\Users\YourName\Desktop\spam_sms_project" 
 
-3.Create Virtual Environment
+### 3.Create Virtual Environment
 python -m venv spamSmsDetector
 
-4. Activate Virtual Environment
+### 4. Activate Virtual Environment
 spamSmsDetector\Scripts\activate
 
-5. Install All Required Packages
+### 5. Install All Required Packages
 pip install -r requirements.txt
 Note : Run it only for the first time of execution
 
-6.Run the streamlit App
+### 6.Run the streamlit App
 streamlit run app.py
 
 Your app will open in the browser at http://localhost:8501
 
-7.To Stop The App
+### 7.To Stop The App
 Press Ctrl + C in the terminal
 
-8.To Deactivate the Environment
+### 8.To Deactivate the Environment
 deactivate
 
-Outputs:
+---- 
+
+### Outputs:
 ## Streamlit Interface:
 ![Streamlit interface](https://github.com/user-attachments/assets/5ebfdd7b-b18f-43f3-9eb8-1219c69921f4)
 
-----
-
-![Safe message output](https://github.com/user-attachments/assets/05c1d54c-a6d2-4ef6-81fa-45e5c3cab6ba)
 
 ----
 
