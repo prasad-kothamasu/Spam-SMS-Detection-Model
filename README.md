@@ -1,98 +1,112 @@
+# Spam SMS Detection Model | Machine Learning
 
-
-# Spam SMS Detection | Machine Learning Project
-
-This project builds a machine learning system to classify SMS messages as **Spam** or **Not Spam**. It applies natural language processing techniques and multiple classifiers to achieve high accuracy, helping users filter unwanted messages effectively.
+This project builds a machine learning system to classify SMS messages as **Spam** or **Not Spam** using Natural Language Processing. 
+It trains a Logistic Regression model on preprocessed text and deploys it using a Streamlit web interface.
 
 ---
 
 ## Objective
 
-- Preprocess raw SMS text data.
-- Transform text into numerical features using **TF-IDF Vectorization**.
-- Train and evaluate multiple models:
-  - Logistic Regression
-  - Multinomial Naive Bayes
-  - Support Vector Machine (SVM)
-- Save trained models for future predictions.
+- Clean and preprocess SMS message text
+- Convert text into numerical features using **TF-IDF Vectorization**
+- Train a **Logistic Regression** model to classify messages
+- Save the model and vectorizer using `pickle`
+- Build an interactive UI using **Streamlit** for predictions
 
 ---
 
 ## Dataset
 
-- [SMS Spam Collection Dataset - Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset?resource=download)
-- Contains 5,500+ labeled SMS messages.
+- **Source:** [SMS Spam Collection Dataset – Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset?resource=download)
+- **Size:** ~5,500 labeled SMS messages
+- **Labels:** `spam` or `ham` (not spam)
 
 ---
 
 ## Technologies Used
 
-- Python
-- Google Colab
-- Pandas, NumPy
-- NLTK (Natural Language Toolkit)
-- Scikit-learn
-- Matplotlib, Seaborn (for visualization)
-- Pickle (for saving models)
+- **Python**
+- **Google Colab** – Model training
+- **Scikit-learn** – ML model
+- **NLTK** – Text preprocessing
+- **TF-IDF** – Feature extraction
+- **Pickle** – Model saving
+- **Streamlit** – Web app frontend
+- **Pandas, NumPy**
 
 ---
 
 ## Project Workflow
 
-1. **Loaded Data**  
-   Uploaded the SMS dataset into Colab for processing.
+1. **Data Loading**
+   - Loaded and read `spam.csv` in Colab
 
-2. **Data Preprocessing**  
-   - Lowercasing text  
-   - Removing punctuation and stopwords  
+2. **Text Preprocessing**
+   - Lowercasing
+   - Removing punctuation
+   - Removing stopwords (using NLTK)
 
-3. **Feature Extraction**  
-   - Applied **TF-IDF Vectorization** to convert text into numerical vectors.
+3. **Feature Extraction**
+   - Applied **TF-IDF Vectorization** to convert text to vectors
 
-4. **Training The Models**  
-   - Trained and compared **Logistic Regression**, **Naive Bayes**, and **SVM** models.
+4. **Model Training**
+   - Trained a **Logistic Regression** model for binary classification
 
-5. **Model Evaluation**  
-   - Evaluated using **accuracy score**, **confusion matrix**, and **classification report**.
-   - Cross-validation performed for robustness.
+5. **Model Evaluation**
+   - Evaluated with **accuracy**, **confusion matrix**, and **classification report**
+   - Cross-validation used for robustness
 
-6. **Saving Models**  
-   - Saved the best model and vectorizer as `.pkl` files.
+6. **Saving for Inference**
+   - Saved:
+     - `spam_model.pkl` (trained model)
+     - `vectorizer.pkl` (TF-IDF transformer)
 
-7. **Predict Function**  
-   - Added a custom function to predict if a user-input SMS is spam or not.
+7. **Frontend Integration**
+   - Built a **Streamlit app** to let users test SMS inputs interactively
 
 ---
 
 ## Results
 
-| Model | Accuracy |
-|:-----|:---------|
-| Logistic Regression | ~97% |
-| Naive Bayes | ~96% |
-| SVM | ~97% |
+| Model Used          | Accuracy |
+|---------------------|----------|
+| Logistic Regression | ~97%     |
 
-- Logistic Regression chosen as final model due to simplicity and strong performance.
-- Cross-validation confirmed model stability.
+Logistic Regression was selected due to its strong performance, simplicity, and real-time prediction speed.
 
 ---
 
+## How to Run
 
-## How to Run the Project
+### 1. Open Command Prompt (CMD)
 
-1. Upload the `spam.csv` dataset.
-2. Run all notebook cells sequentially.
-3. Test the `predict_message()` function with your own SMS text.
-4. Models and vectorizer will be saved and downloadable.
+You can do this by pressing `Win + R`, typing `cmd`, and hitting Enter.
 
 ---
 
-## Author
+### 2. Navigate to Your Project Folder
+Use the `cd` command to change to your project directory. Example:
+```bash
+cd "C:\Users\YourName\Desktop\spam_sms_project" 
 
-- **Name:** *Kothamasu Venkata Naga Jaya Prasad*  
-- **Email:** *prasadkothamasudup@gmail.com*
+### 3.Create Virtual Environment
+python -m venv spamSmsDetector
 
----
+### 4. Activate Virtual Environment
+spamSmsDetector\Scripts\activate
 
+### 5. Install All Required Packages
+pip install -r requirements.txt
+Note : Run it only for the first time of execution
 
+### 6.Run the streamlit App
+streamlit run app.py
+
+Your app will open in the browser at http://localhost:8501
+
+7.To Stop The App
+Press Ctrl + C in the terminal
+
+8.To Deactivate the Environment
+deactivate
 
